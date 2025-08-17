@@ -1,4 +1,10 @@
 # Các Thuật Toán Học Máy Cơ Bản: Linear Regression, K-Means, K-Nearest Neighbors
+**Tài Liệu Tham Khảo**:
+- [Bài 1: Giới thiệu về Machine Learning](https://machinelearningcoban.com/2016/12/26/introduce/)
+- [Bài 2: Phân nhóm các thuật toán Machine Learning](https://machinelearningcoban.com/2016/12/27/categories/)
+- [Bài 3: Linear Regression](https://machinelearningcoban.com/2016/12/28/linearregression/)
+- [Bài 4: K-means Clustering](https://machinelearningcoban.com/2017/01/01/kmeans/)
+- [Bài 6: K-nearest neighbors](https://machinelearningcoban.com/2017/01/08/knn/)
 
 ## 1. Giới Thiệu Về Machine Learning
 ### Lý Thuyết Chính
@@ -128,45 +134,4 @@ print("Độ chính xác:", accuracy_score(y_test, y_pred))
 3. Đánh giá: MSE cho Regression, Accuracy cho KNN, Silhouette score cho K-means.
 4. Trình bày: Vẽ biểu đồ (sử dụng Matplotlib) để minh họa cụm hoặc đường hồi quy.
 
-**Code**:
-```python
-import numpy as np
-import matplotlib.pyplot as plt
-from sklearn.datasets import load_iris
-from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LinearRegression
-from sklearn.cluster import KMeans
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.metrics import accuracy_score, silhouette_score
-
-# Load data
-iris = load_iris()
-X, y = iris.data, iris.target
-
-# 1. Linear Regression
-X_reg = X[:, 0].reshape(-1, 1)  # Sepal length
-y_reg = X[:, 2]  # Petal length
-reg = LinearRegression().fit(X_reg, y_reg)
-print("Linear Reg: Coef", reg.coef_)
-
-# 2. K-means
-kmeans = KMeans(n_clusters=3).fit(X)
-print("K-means Silhouette:", silhouette_score(X, kmeans.labels_))
-
-# 3. KNN
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
-knn = KNeighborsClassifier(n_neighbors=3).fit(X_train, y_train)
-print("KNN Accuracy:", accuracy_score(y_test, knn.predict(X_test)))
-
-# Vẽ biểu đồ (ví dụ cho K-means)
-plt.scatter(X[:, 0], X[:, 1], c=kmeans.labels_)
-plt.title("K-means Clustering on Iris")
-plt.show()
-```
-
-**Tài Liệu Tham Khảo**:
-- [Bài 1: Giới thiệu về Machine Learning](https://machinelearningcoban.com/2016/12/26/introduce/)
-- [Bài 2: Phân nhóm các thuật toán Machine Learning](https://machinelearningcoban.com/2016/12/27/categories/)
-- [Bài 3: Linear Regression](https://machinelearningcoban.com/2016/12/28/linearregression/)
-- [Bài 4: K-means Clustering](https://machinelearningcoban.com/2017/01/01/kmeans/)
-- [Bài 6: K-nearest neighbors](https://machinelearningcoban.com/2017/01/08/knn/)
+**Code**: [demo.ipynb](code/demo.ipynb)
