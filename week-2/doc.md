@@ -341,5 +341,4 @@ Sử dụng bộ dữ liệu Iris (150 mẫu hoa với 4 đặc trưng: chiều 
 3. Đánh giá: Accuracy cho phân loại, so sánh train/test để kiểm tra overfitting.
 4. Trình bày: Vẽ biểu đồ decision boundary (nếu có) để trực quan hóa.
 
-### Code
-[Link tới demo.ipynb](code/demo.ipynb)
+### Code: [demo.ipynb](code/demo.ipynb)

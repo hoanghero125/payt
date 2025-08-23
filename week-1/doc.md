@@ -134,4 +134,4 @@ print("Độ chính xác:", accuracy_score(y_test, y_pred))
 3. Đánh giá: MSE cho Regression, Accuracy cho KNN, Silhouette score cho K-means.
 4. Trình bày: Vẽ biểu đồ (sử dụng Matplotlib) để minh họa cụm hoặc đường hồi quy.
 
-**Code**: [demo.ipynb](code/demo.ipynb)
+### Code: [demo.ipynb](code/demo.ipynb)
